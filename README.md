@@ -133,6 +133,14 @@ re-start it to see the changes***.
 Interestingly, we can swap out the simple `Proc` for a _class_. So long as it
 responds to `#call`, Rack will let us make a substitution.
 
+
+##### Also 
+#####  you need to use kill -9 59780 (use lsof -wni tcp:3000 to see which process used 3000 port and get the process pid)
+ in case you can not access the file again through the terminal use lsof first to check what process is using the port. The process id (PID) is the sencond header. Use that number to kill -9 (PID) the connection and free up the port. 
+
+
+
+
 Create a new file called `second.ru` and fill it out like:
 
 ```ruby
