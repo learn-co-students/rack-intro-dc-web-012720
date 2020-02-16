@@ -1,8 +1,11 @@
+require 'pry'
 class Application
 
   def call(env)
     resp = Rack::Response.new
-    resp.write "Hello, World"
+    binding.pry
+    resp.write "Hello, my name is"
+    binding.pry
     resp.finish
   end
 
